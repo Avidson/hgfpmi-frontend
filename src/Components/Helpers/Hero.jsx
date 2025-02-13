@@ -8,11 +8,11 @@ function Hero({ setSelectedCard }) {
         setSelectedCard('onlineGiving')
     }
     
-    const videoUrl = "https://youtu.be/-ndFtmrpN5U?si=9F71UgeS0fBuxC3B?rel=0";
+    const videoUrl = "https://youtu.be/-ndFtmrpN5U?si=9F71UgeS0fBuxC3B";
 
     const embedUrl = videoUrl
     .split("?")[0]
-    .replace("youtu.be/", "www.youtube.com/embed/") + "?autoplay=1&mute=1";
+    .replace("youtu.be/", "www.youtube.com/embed/") + "?autoplay=1&mute=1&loop=1&playlist=-ndFtmrpN5U";
 
   return (
     <div className='w-full h-[90vh] relative'>
@@ -60,7 +60,7 @@ function Hero({ setSelectedCard }) {
          */}
 
     <iframe
-        src="https://www.youtube.com/embed/-ndFtmrpN5U?rel=0&loop=1&playlist=-ndFtmrpN5U"
+        src={embedUrl}
         className="absolute top-0 left-0 w-full h-full"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
