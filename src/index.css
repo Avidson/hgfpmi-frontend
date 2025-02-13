@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,900&family=Space+Grotesk:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+  .page{ 
+    @apply w-[100vw] overflow-x-hidden min-h-[100vh] flex flex-col
+  }
+  .pad1{
+    @apply px-16 medium-pc:px-10 tablet:px-12 phone:px-8 
+  }
+  .inputGroup {
+    @apply flex w-full flex-col gap-3 phone:gap-2
+  }
+  .label{
+    @apply text-text-color-2 text-[19px]
+  }
+  .input{
+    @apply w-full p-4 phone:p-3 rounded-[8px] border-[2px] border-text-color-2 text-[18px] phone:text-[16px] text-text-color-3 font-medium
+  }
+  .focusText{
+    @apply text-main-color cursor-pointer text-[21px] phone:text-[18px] font-semibold border-b-[2px] border-b-main-color
+  }
+  .errorText{
+    @apply font-bold text-main-color-dark
+  }
+  .card{
+    @apply p-4 rounded-[10px]
+  }
+  .formCard{
+    @apply flex flex-col gap-1 phone:w-full
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.linear-gradient{
+  background: linear-gradient(to, right, #9B111E, #fff);
+}
+
+/* Custom scrollbar styles */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: #D7E1f4; /* Track color */
+  border-radius: 10px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: #869DCB; /* Handle color */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: #6882B6; /* Handle hover color */
+}
