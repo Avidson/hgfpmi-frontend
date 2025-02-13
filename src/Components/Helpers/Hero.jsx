@@ -8,7 +8,7 @@ function Hero({ setSelectedCard }) {
         setSelectedCard('onlineGiving')
     }
 
-    const videoUrl = "https://youtu.be/embed/-ndFtmrpN5U?rel=0";
+    const videoUrl = "https://youtube.com/embed/-ndFtmrpN5U?rel=0";
 
     const embedUrl = videoUrl
     .split("?")[0]
@@ -60,7 +60,7 @@ function Hero({ setSelectedCard }) {
          */}
 
     <iframe
-        src={embedUrl}
+        src={videoUrl}
         className="absolute top-0 left-0 w-full h-full"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
