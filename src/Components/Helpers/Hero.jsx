@@ -60,7 +60,7 @@ function Hero({ setSelectedCard }) {
          */}
 
     <iframe
-        src={embedUrl}
+        src="https://www.youtube.com/embed/-ndFtmrpN5U?rel=0&loop=1&playlist=-ndFtmrpN5U"
         className="absolute top-0 left-0 w-full h-full"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
