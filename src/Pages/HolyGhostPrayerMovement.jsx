@@ -82,7 +82,7 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
                       <input onChange={handleChange} type="text" name="first_name" id="first_name" className="input p-2" />
                   </div>
                   <div className="formCard">
-                      <label className="uppercase label" htmlFor=""><span style={{ color: 'red' }}>*</span>Last Name</label>
+                      <label className="uppercase label" htmlFor="">Last Name<span style={{ color: 'red' }}>*</span></label>
                       <input onChange={handleChange} type="text" name="last_name" id="last_name" className="input p-2" />
                   </div>
               </div>
