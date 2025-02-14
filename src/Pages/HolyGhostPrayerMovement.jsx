@@ -78,18 +78,18 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
           <form onSubmit={handleSubmit} className="w-[650px] phone:w-full border flex flex-col gap-5 p-5 mb-9">
               <div className="flex items-center gap-2 justify-between w-full tablet:flex-col phone:w-full ">
                   <div className="formCard">
-                      <label className="uppercase label" htmlFor="">First Name</label>
+                      <label className="uppercase label" htmlFor="">First Name<span style={{ color: 'red' }}>*</span></label>
                       <input onChange={handleChange} type="text" name="first_name" id="first_name" className="input p-2" />
                   </div>
                   <div className="formCard">
-                      <label className="uppercase label" htmlFor="">Last Name</label>
+                      <label className="uppercase label" htmlFor=""><span style={{ color: 'red' }}>*</span>Last Name</label>
                       <input onChange={handleChange} type="text" name="last_name" id="last_name" className="input p-2" />
                   </div>
               </div>
   
               <div className="flex items-center gap-2 justify-between tablet:flex-col">
                   <div className="formCard">
-                      <label className="uppercase label" htmlFor="">Telephone</label>
+                      <label className="uppercase label" htmlFor="">Telephone<span style={{ color: 'red' }}>*</span></label>
                       <input onChange={handleChange} type="number" name="telephone" id="telephone" className="input p-2" />
                   </div>
                   <div className="formCard">
@@ -108,11 +108,14 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
                       </select>
                   </div>
                   <div className="formCard">
-                      <label className="uppercase label" htmlFor="">Convention Location</label>
+                      <label className="uppercase label" htmlFor="">Convention Location
+                      <span style={{ color: 'red' }}>*</span>
+                      </label>
                       <select onChange={handleChange} name="convention_location" id="convention_location" className="input p-2 w-full">
                           <option value="">-- SELECT LOCATION --</option>
                           <option value="Houston">Houston</option>
                           <option value="New York">New York</option>
+                          <option value="New York">Both - New York & Houston</option>
                       </select>
                   </div>
               </div>
