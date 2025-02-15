@@ -97,6 +97,20 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
                       <input onChange={handleChange} type="email" name="email" id="email" className="input p-2" />
                   </div>
               </div>
+              <div className="flex items-center gap-2 justify-between tablet:flex-col">
+                  <div className="formCard">
+                      <label className="uppercase label" htmlFor="">City<span style={{ color: 'red' }}>*</span></label>
+                      <input onChange={handleChange} type="text" name="city" id="telephone" className="input p-2" />
+                  </div>
+                  <div className="formCard">
+                      <label className="uppercase label" htmlFor="">State</label>
+                      <input onChange={handleChange} type="text" name="state" id="email" className="input p-2" />
+                  </div>
+                  <div className="formCard">
+                      <label className="uppercase label" htmlFor="">Country</label>
+                      <input onChange={handleChange} type="text" name="country" id="email" className="input p-2" />
+                  </div>
+              </div>
   
               <div className="flex items-center gap-2 justify-between tablet:flex-col">
                   <div className="formCard">
@@ -115,7 +129,7 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
                           <option value="">-- SELECT LOCATION --</option>
                           <option value="Houston">Houston</option>
                           <option value="New York">New York</option>
-                          <option value="New York">Both - New York & Houston</option>
+                          <option value="Both">Both - New York & Houston</option>
                       </select>
                   </div>
               </div>
