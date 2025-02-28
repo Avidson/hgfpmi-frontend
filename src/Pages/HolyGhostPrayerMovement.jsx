@@ -79,28 +79,28 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
               <div className="flex items-center gap-2 justify-between w-full tablet:flex-col phone:w-full ">
                   <div className="formCard">
                       <label className="uppercase label" htmlFor="">First Name<span style={{ color: 'red' }}>*</span></label>
-                      <input onChange={handleChange} type="text" name="first_name" id="first_name" className="input p-2" />
+                      <input onChange={handleChange} type="text" name="first_name" id="first_name" className="input p-2" required/>
                   </div>
                   <div className="formCard">
                       <label className="uppercase label" htmlFor="">Last Name<span style={{ color: 'red' }}>*</span></label>
-                      <input onChange={handleChange} type="text" name="last_name" id="last_name" className="input p-2" />
+                      <input onChange={handleChange} type="text" name="last_name" id="last_name" className="input p-2" required/>
                   </div>
               </div>
   
               <div className="flex items-center gap-2 justify-between tablet:flex-col">
                   <div className="formCard">
                       <label className="uppercase label" htmlFor="">Telephone<span style={{ color: 'red' }}>*</span></label>
-                      <input onChange={handleChange} type="number" name="telephone" id="telephone" className="input p-2" />
+                      <input onChange={handleChange} type="number" name="telephone" id="telephone" className="input p-2" required />
                   </div>
                   <div className="formCard">
-                      <label className="uppercase label" htmlFor="">Email</label>
-                      <input onChange={handleChange} type="email" name="email" id="email" className="input p-2" />
+                      <label className="uppercase label" htmlFor="">Email<span style={{ color: 'red' }}>*</span></label>
+                      <input onChange={handleChange} type="email" name="email" id="email" className="input p-2" required/>
                   </div>
               </div>
               <div className="flex items-center gap-2 justify-between tablet:flex-col">
                   <div className="formCard">
                       <label className="uppercase label" htmlFor="">City<span style={{ color: 'red' }}>*</span></label>
-                      <input onChange={handleChange} type="text" name="city" id="telephone" className="input p-2" />
+                      <input onChange={handleChange} type="text" name="city" id="telephone" className="input p-2"  required/>
                   </div>
                   <div className="formCard">
                       <label className="uppercase label" htmlFor="">State</label>
