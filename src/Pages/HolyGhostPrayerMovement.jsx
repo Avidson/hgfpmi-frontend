@@ -65,14 +65,11 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
         <div className="flex flex-col items-center justify-center gap-3">
           <img alt="logo" src={LogoImg} className="w-20" />
           <h2 className="uppercase font-semibold text-center text-main-color tablet:w-[98%]">
-              Holy Ghost Fraternity prayer movement international
+              Holy GHOST FRATERNITY PRAYER MOVEMENT INTERTIONAL
           </h2>
-          <p className="uppercase text-main-color font-light">
-              2025 convention (usa)
-          </p>
-          <p>
-              JUNE - JULY
-          </p>
+          <p className="uppercase text-main-color font-light">HGFPMI 2025 CONVENTION (USA)</p>
+          <p>NEW YORK - JULY 9TH T0 JULY 13TH, 2025</p>
+          <p>HOUSTON - JULY 16TH TO JULY 20TH, 2025</p>
   
           <h3 className="text-main-color border-b-[2px] border-b-main-color mt-8 font-semibold text-center">Please fill the form below</h3>
           <form onSubmit={handleSubmit} className="w-[650px] phone:w-full border flex flex-col gap-5 p-5 mb-9">
