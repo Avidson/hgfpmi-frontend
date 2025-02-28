@@ -122,7 +122,7 @@ function HolyGhostPrayerMovement({ setSelectedCard }) {
                       <label className="uppercase label" htmlFor="">Convention Location
                       <span style={{ color: 'red' }}>*</span>
                       </label>
-                      <select onChange={handleChange} name="convention_location" id="convention_location" className="input p-2 w-full">
+                      <select onChange={handleChange} name="convention_location" id="convention_location" className="input p-2 w-full" required>
                           <option value="">-- SELECT LOCATION --</option>
                           <option value="Houston">Houston</option>
                           <option value="New York">New York</option>
