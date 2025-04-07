@@ -46,6 +46,6 @@ export const resourceData = [
     id: '1',
     image: Image,
     title: 'Empty Out the Negative',
-    description: 'Joy, peace, creativity, advancement, a spouse, healing—God wants to bless you! It’s time to let go of the old, empty out the negative, and make room for all that He is going to do in your life. Our ministry thank you will inspire you to create space so God can fill your life with good things!'
+    description: 'God wants to bless you!, It is time to let go of the old. empty out the negative, and make room for all that He is going to do in your life. Our ministry will inspire you to create space so God can fill your with good things!'
   }
 ]
