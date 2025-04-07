@@ -29,7 +29,7 @@ function QuickBanner() {
         <RiShoppingBag4Line className="text-[60px]" />
         <h1 className="text-center text-[32px] tablet:text-[26px] phone:text-[24px]">Check Out The Store</h1>
         <Link to='/shop' className=" flex items-center gap-2 text-main-color hover:text-main-color-dark duration-300 text-[21px]">
-          Veiw Store
+          View Store
           <MdArrowForwardIos className="" />
         </Link>
       </div>
