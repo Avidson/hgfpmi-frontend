@@ -11,7 +11,7 @@ function QuickBanner() {
         <ImFilePlay className="text-[55px]" />
         <h1 className="text-center text-[32px] tablet:text-[26px] phone:text-[24px]">Find Past Messages</h1>
         <Link to='/sermon' className=" flex items-center gap-2 text-main-color hover:text-main-color-dark duration-300 text-[21px]">
-          Veiw Messages
+          View Messages
           <MdArrowForwardIos className="" />
         </Link>
       </div>
