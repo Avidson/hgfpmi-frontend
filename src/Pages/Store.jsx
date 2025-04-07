@@ -33,7 +33,19 @@ function Store({ setSelectedCard }) {
         </div>
         <StoreCategory />
 
-
+            <div className="bg-main-color pad1 py-8 gap-8 text-white flex flex-col items-center justify-center">
+                    <h1 className='text-[32px] tablet:text-[28px] phone:text-[20px]'>Coming Soon!</h1>
+        
+                    <h3 className='text-[26px] tablet:text-[18px]'>Store Will Soon Be Open For All!</h3>
+        
+                    <p className='text-center'>
+                           For More Info, Please Contact: 
+                    </p>
+                    <p className='text-center'>
+                           Nwanneka Lynda Chukwurah: +1 (614) 369 9147 
+                    </p>
+        
+              </div>
 
         <div className="mt-auto">
             <Footer />
