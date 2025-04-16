@@ -31,14 +31,14 @@ const AboutFada = () => {
       content: "Rev. Fr. Emmanuel Obimma's journey as a priest and spiritual leader serves as a guiding light for many seeking a deeper connection with God. His compassion, wisdom, and commitment inspire both the local community and those beyond geographical boundaries"
     }
   ];
-
+  
   const galleryImages = [
-    "https://drive.google.com/file/d/1Nkj1GUB9ohahVXyNC259k4YXejQ3t6aE/view?usp=drive_link",
-    "https://drive.google.com/file/d/1DXK8wj6q9EGU3sf91wasMYsoMSylhtjK/view?usp=drive_link",
-    "https://drive.google.com/file/d/1E8TkypzqlatcdAgKFhsQcwmOd1qPw5Ec/view?usp=drive_link",
-    "https://drive.google.com/file/d/1aUlZuuBA6Zsw8p0CvzDNa6ho-gVuFcqu/view?usp=drive_link",
-    "https://drive.google.com/file/d/1IUUnL8YNYQbTXOcDblGpq0DfF-k79SIC/view?usp=drive_link",
-    "https://drive.google.com/file/d/1ytbhqZZO2kewwiFwUZQeXrtDKGtRrJb5/view?usp=drive_link"
+    "https://drive.google.com/thumbnail?id=1Nkj1GUB9ohahVXyNC259k4YXejQ3t6aE",
+    "https://drive.google.com/thumbnail?id=1DXK8wj6q9EGU3sf91wasMYsoMSylhtjK",
+    "https://drive.google.com/thumbnail?id=1E8TkypzqlatcdAgKFhsQcwmOd1qPw5Ec",
+    "https://drive.google.com/thumbnail?id=1aUlZuuBA6Zsw8p0CvzDNa6ho-gVuFcqu",
+    "https://drive.google.com/thumbnail?id=1IUUnL8YNYQbTXOcDblGpq0DfF-k79SIC",
+    "https://drive.google.com/thumbnail?id=1ytbhqZZO2kewwiFwUZQeXrtDKGtRrJb5"
   ];
 
   return (
