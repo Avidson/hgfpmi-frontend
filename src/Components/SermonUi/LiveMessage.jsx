@@ -24,7 +24,7 @@ function LiveMessage({ countDownTime }) {
           <Spinner />
         ) : (
           <iframe 
-            src={liveObject?.url_for?.replace('watch?v=', 'embed/')}
+            src={liveObject?.url_for?.replace('live', 'embed/')}
             className="w-[850px] small-pc:w-[95%] h-[500px] shadow-xl border-[2px] border-main-color rounded-[10px] flex items-center justify-center relative"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
