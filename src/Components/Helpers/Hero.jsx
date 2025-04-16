@@ -8,11 +8,11 @@ function Hero({ setSelectedCard }) {
         setSelectedCard('onlineGiving')
     }
     
-    const videoUrl = "https://youtu.be/-ndFtmrpN5U?si=9F71UgeS0fBuxC3B";
+    const videoUrl = "https://youtu.be/55UUNqLeln0";
 
     const embedUrl = videoUrl
     .split("?")[0]
-    .replace("youtu.be/", "www.youtube.com/embed/") + "?autoplay=1&mute=1&loop=1&playlist=-ndFtmrpN5U";
+    .replace("youtu.be/", "www.youtube.com/embed/") + "?autoplay=1&mute=1&loop=1&playlist=55UUNqLeln0";
 
   return (
     <div className='w-full h-[90vh] relative'>
