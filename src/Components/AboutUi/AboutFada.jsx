@@ -7,7 +7,7 @@ import { FaChurch, FaHeart, FaStar, FaBookOpen, FaPray, FaHandsHelping, FaArrowR
 import { motion } from 'framer-motion';
 
 const AboutFada = () => {
-  const photoPlaceholder = "https://drive.google.com/file/d/1ytbhqZZO2kewwiFwUZQeXrtDKGtRrJb5/view?usp=drive_link";
+  const photoPlaceholder = "https://drive.google.com/file/d/1ytbhqZZO2kewwiFwUZQeXrtDKGtRrJb5/view?usp=sharing";
 
   const sections = [
     {
