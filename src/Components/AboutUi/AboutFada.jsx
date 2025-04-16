@@ -7,7 +7,7 @@ import { FaChurch, FaHeart, FaStar, FaBookOpen, FaPray, FaHandsHelping, FaArrowR
 import { motion } from 'framer-motion';
 
 const AboutFada = () => {
-  const photoPlaceholder = "https://hgfpmi.org/wp-content/uploads/2024/07/Rev.-Fr.-Emmanuel-Obimma-1-768x924-1.png";
+  const photoPlaceholder = "https://drive.google.com/file/d/1ytbhqZZO2kewwiFwUZQeXrtDKGtRrJb5/view?usp=drive_link";
 
   const sections = [
     {
@@ -33,12 +33,12 @@ const AboutFada = () => {
   ];
 
   const galleryImages = [
-    "https://hgfpmi.org/wp-content/uploads/2024/04/PHOTO-2024-04-28-22-46-44.jpg",
-    "https://hgfpmi.org/wp-content/uploads/2024/04/PHOTO-2024-04-28-22-46-47.jpg",
-    "https://hgfpmi.org/wp-content/uploads/2024/04/PHOTO-2024-04-28-22-46-48.jpg",
-    "https://hgfpmi.org/wp-content/uploads/2024/04/PHOTO-2024-04-28-22-46-43.jpg",
-    "https://hgfpmi.org/wp-content/uploads/2024/04/PHOTO-2024-04-28-22-46-46.jpg",
-    "https://hgfpmi.org/wp-content/uploads/2024/04/PHOTO-2024-04-28-22-46-45.jpg"
+    "https://drive.google.com/file/d/1Nkj1GUB9ohahVXyNC259k4YXejQ3t6aE/view?usp=drive_link",
+    "https://drive.google.com/file/d/1DXK8wj6q9EGU3sf91wasMYsoMSylhtjK/view?usp=drive_link",
+    "https://drive.google.com/file/d/1E8TkypzqlatcdAgKFhsQcwmOd1qPw5Ec/view?usp=drive_link",
+    "https://drive.google.com/file/d/1aUlZuuBA6Zsw8p0CvzDNa6ho-gVuFcqu/view?usp=drive_link",
+    "https://drive.google.com/file/d/1IUUnL8YNYQbTXOcDblGpq0DfF-k79SIC/view?usp=drive_link",
+    "https://drive.google.com/file/d/1ytbhqZZO2kewwiFwUZQeXrtDKGtRrJb5/view?usp=drive_link"
   ];
 
   return (
@@ -74,10 +74,10 @@ const AboutFada = () => {
                   REV. FR. EMMANUEL OBIMMA
                 </h2>
                 <p className="text-xl text-red-800 font-semibold">
-                  (PADA EBUBE MUONSO)
+                  (FADA EBUBE MUONSO)
                 </p>
                 <p className="text-gray-600 leading-relaxed">
-                  Rev. Fr. Emmanuel Obimma is an ordained Catholic Priest hailing from the esteemed Onitsha Archdiocese. Born into the family of Mr. (Late) and Mrs. Obimma of Nkwelle-Ezunaka in Anambra state, he spent his formative years in the same town. As the youngest son among seven siblings, he was ordained a priest on August 6, 2011.
+                  Rev. Fr. Emmanuel Obimma is an ordained Catholic Priest hailing from the esteemed Onitsha Archdiocese. Born into the family of Late Mr. and Mrs. Obimma of Nkwelle-Ezunaka in Anambra state. He spent his formative years in the same town. As the youngest son among seven siblings, he was ordained a priest on August 6, 2011.
                 </p>
          
               </motion.div>
