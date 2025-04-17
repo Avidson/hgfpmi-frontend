@@ -10,7 +10,7 @@ export const navlinks = [
         style: ''
     },
     {
-        name: 'Programs & Events',
+        name: 'Programs',
         link: 'programs-and-events',
         style: ''
     },
@@ -20,7 +20,7 @@ export const navlinks = [
         style: ''
     },
         {
-        name: 'Blogs',
+        name: 'Blog',
         link: 'blogs',
         style: ''
     },
@@ -61,7 +61,7 @@ export const menuLinks = [
       style: '',
     },
     {
-      name: 'Programs & Events',
+      name: 'Programs',
       link: '/programs-and-events',
       style: '',
       /**
@@ -93,7 +93,7 @@ export const menuLinks = [
       link: '/shop' 
     },
     {
-      name: 'Children Corner',
+      name: 'Kids',
       link: '/children-coner',
       /**
        * 
