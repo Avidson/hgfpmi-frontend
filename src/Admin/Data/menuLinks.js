@@ -4,7 +4,7 @@ export const menuLinks = [
         link: '/admin/dashboard'
     },
     {
-        name: 'Programs & Events',
+        name: 'Programs',
         link: '/admin/events',
     },
     {
@@ -28,7 +28,7 @@ export const menuLinks = [
         link: '/admin/notifications',
     },
     {
-        name: 'Childern Coner',
+        name: 'Kids',
         link: '/admin/children-coner'
     },
     {
