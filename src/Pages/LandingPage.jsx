@@ -80,7 +80,7 @@ function LandingPage({ setSelectedCard }) {
         <OurCampaign />
          */}
 
-      <div className="mb-8 bg-gray-100">
+ {/*      <div className="mb-8 bg-gray-100">
         <TestimonialsSection data={testimonies} showMore={false} />
 
         <div className="text-center mt-6 mb-12">
@@ -91,7 +91,7 @@ function LandingPage({ setSelectedCard }) {
             View More
           </Link>
         </div>
-      </div>
+      </div> */}
 
         {/**
          * 
