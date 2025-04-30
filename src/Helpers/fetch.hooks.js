@@ -142,3 +142,72 @@ export function useFetchMessages({ live }){
 
     return messagesData
 }
+
+export function useFetchVideoTestimonies(query){
+    const [ videoTestimonies, setVideoTestionies] = useState({ isFetching: true, data: null, status: null, serverError: null, })
+    useEffect(() => {
+        const fetchVideoTestimonies = async () => {
+            try {
+                const { data, status} = !query ? await axios.get(`/programs/video-testimonies`) : await axios.get(`/programs/video-testimonies/${query}`)
+                //console.log('Data from Hooks>>>', data, 'STATUS', status)
+
+                if(status === 200){
+                    setVideoTestionies({ isFetching: false, data: data, status: status, serverError: null})
+                } else{
+                    setVideoTestionies({ isFetching: false, data: null, status: status, serverError: null})
+                }
+            } catch (error) {
+                setVideoTestionies({ isFetching: false, data: null, status: null, serverError: error})
+            }
+        }
+        fetchVideoTestimonies()
+    }, [query])
+
+    return videoTestimonies
+}
+
+export function useFetchGallery(query){
+    const [ gallery, setGallery] = useState({ isFetching: true, data: null, status: null, serverError: null, })
+    useEffect(() => {
+        const fetchGallery = async () => {
+            try {
+                const { data, status} = !query ? await axios.get(`/resources/gallery`) : await axios.get(`/resources/gallery/${query}`)
+                //console.log('Data from Hooks>>>', data, 'STATUS', status)
+
+                if(status === 200){
+                    setGallery({ isFetching: false, data: data, status: status, serverError: null})
+                } else{
+                    setGallery({ isFetching: false, data: null, status: status, serverError: null})
+                }
+            } catch (error) {
+                setGallery({ isFetching: false, data: null, status: null, serverError: error})
+            }
+        }
+        fetchGallery()
+    }, [query])
+
+    return gallery
+}
+
+export function useFetchTestimonies(query){
+    const [ testimonies, setTestionies] = useState({ isFetching: true, data: null, status: null, serverError: null, })
+    useEffect(() => {
+        const fetchTestimonies = async () => {
+            try {
+                const { data, status} = !query ? await axios.get(`/programs/testimonies`) : await axios.get(`/programs/testimonies/${query}`)
+                //console.log('Data from Hooks>>>', data, 'STATUS', status)
+
+                if(status === 200){
+                    setTestionies({ isFetching: false, data: data, status: status, serverError: null})
+                } else{
+                    setTestionies({ isFetching: false, data: null, status: status, serverError: null})
+                }
+            } catch (error) {
+                setTestionies({ isFetching: false, data: null, status: null, serverError: error})
+            }
+        }
+        fetchTestimonies()
+    }, [query])
+
+    return testimonies
+}

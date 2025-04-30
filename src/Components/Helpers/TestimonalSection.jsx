@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import LogoImg from '../../assests/HGFPMI-LOGO.png'
 
-const TestimonialCard = ({ name, role, testimony }) => (
+const TestimonialCard = ({ testifier, date_added, testimony_detail }) => (
   <div className="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
     <div className="flex flex-col items-center">
       <div className="mb-4">
@@ -10,23 +10,67 @@ const TestimonialCard = ({ name, role, testimony }) => (
           <img alt='logo' src={LogoImg} className='w-[38px]' />
         </div>
       </div>
-      <blockquote className="text-gray-700 text-center mb-4 line-clamp-4">
-        "{testimony}"
+      <blockquote dangerouslySetInnerHTML={{ __html: testimony_detail }} className="text-gray-700 text-center mb-4 line-clamp-4">
       </blockquote>
       <div className="text-center mt-auto">
-        <h4 className="font-semibold text-gray-900 mb-1">{name}</h4>
-        <p className="text-red-500 text-sm">{role}</p>
+        <h4 className="font-semibold text-gray-900 mb-1">{testifier}</h4>
+        <p className="text-red-500 text-sm">{
+            new Date(date_added).toLocaleString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+            })    
+        }</p>
       </div>
     </div>
   </div>
 );
 
-const TestimonialsSection = ({ data, showMore, text }) => {
+const TestimonialVideoCard = ({ message_title, created, url_for }) => (
+    <div className="bg-white rounded-xl shadow-md p-6 transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
+      {
+        console.log('message_title', message_title)
+      }
+      <div className="flex flex-col items-center">
+        <div className="mb-4">
+          <div className="w-16 h-16 relative flex items-center justify-center">
+            <div className="absolute inset-0 bg-red-500 rounded-full opacity-20"></div>
+            <img alt='logo' src={LogoImg} className='w-[38px]' />
+          </div>
+        </div>
+        <iframe 
+            src={url_for}
+            frameBorder='0'
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen  
+            className='w-full h-full'
+        />
+        <div className="text-center mt-auto">
+          <h4 className="font-semibold text-gray-900 mb-1">{message_title}</h4>
+          <p className="text-red-500 text-sm">{
+            new Date(created).toLocaleString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit',
+                hour12: true
+              })
+            }</p>
+        </div>
+      </div>
+    </div>
+  );
+
+const TestimonialsSection = ({ data, loading, showMore, text }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const itemsPerSlide = 3;
-  const totalSlides = Math.ceil(data.length / itemsPerSlide);
-
+  const totalSlides = Math.ceil(data?.length / itemsPerSlide);
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
@@ -90,11 +134,24 @@ const TestimonialsSection = ({ data, showMore, text }) => {
               {Array.from({ length: totalSlides }).map((_, slideIndex) => (
                 <div key={slideIndex} className="w-full flex-shrink-0">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {data
-                      .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
-                      .map((testimonial) => (
-                        <TestimonialCard key={testimonial.id} {...testimonial} />
-                      ))}
+                    { text && text.toLowerCase() === 'videos' ? (
+                        loading ? (
+                            <h1>Loading</h1>
+                        ) : (
+                            data
+                             .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
+                             .map((testimonial) => (
+                                 <TestimonialVideoCard key={testimonial.id} {...testimonial} />
+                                ))
+                        )
+                        ) : (
+                            data
+                            .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
+                            .map((testimonial) => (
+                              <TestimonialCard key={testimonial.id} {...testimonial} />
+                            ))
+                        )
+                    }
                   </div>
                 </div>
               ))}
