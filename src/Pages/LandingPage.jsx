@@ -20,6 +20,8 @@ import { testimonialData } from "../data/testimonies";
 import { useEffect } from "react";
 import QuickBanner from "../Components/Helpers/QuickBanner";
 import CommunityBanner from "../Components/Helpers/CommunityBanner";
+import { useFetchTestimonies } from "../Helpers/fetch.hooks";
+import Spinner from "../Components/Helpers/Spinner";
 
 function LandingPage({ setSelectedCard }) {
   useEffect(() => {
