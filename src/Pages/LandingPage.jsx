@@ -54,13 +54,17 @@ function LandingPage({ setSelectedCard }) {
       </div>
       <SignupBanner />
 
-      <div className="mt-[30px]">
+      <div className="mb-[30px]">
         <UpcomingEvents data={upcomingEventData} />
       </div>
       <StatementOfFaith setSelectedCard={setSelectedCard} />
 
       <div className="py-8">
         <QuickResource />
+      </div>
+
+      <div className="mb-[30px]">
+        <UpcomingEvents data={upcomingEventData} />
       </div>
       
       <div className="py-8 text-center">

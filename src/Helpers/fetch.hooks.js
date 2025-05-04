@@ -211,3 +211,26 @@ export function useFetchTestimonies(query){
 
     return testimonies
 }
+
+export function useFetchAds(query){
+    const [ ads, setAds] = useState({ isFetching: true, data: null, status: null, serverError: null, })
+    useEffect(() => {
+        const fetchAds = async () => {
+            try {
+                const { data, status} = !query ? await axios.get(`/ads`) : await axios.get(`/ads/${query}`)
+                //console.log('Data from Hooks>>>', data, 'STATUS', status)
+
+                if(status === 200){
+                    setAds({ isFetching: false, data: data, status: status, serverError: null})
+                } else{
+                    setAds({ isFetching: false, data: null, status: status, serverError: null})
+                }
+            } catch (error) {
+                setAds({ isFetching: false, data: null, status: null, serverError: error})
+            }
+        }
+        fetchAds()
+    }, [query])
+
+    return ads
+}
