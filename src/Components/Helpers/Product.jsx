@@ -121,9 +121,9 @@ function Product({data}) {
                     Add To Cart
                 </div>
 
-                <div onClick={() => handleOrderForm(data?.id)} className="w-full p-2 rounded-[0px] font-font-2 text-[19px] phone:text-[16px] bg-main-color cursor-pointer duration-500 hover:bg-main-color-dark text-white font-semibold flex gap-1 items-center justify-center text-center">
+               {/*  <div onClick={() => handleOrderForm(data?.id)} className="w-full p-2 rounded-[0px] font-font-2 text-[19px] phone:text-[16px] bg-main-color cursor-pointer duration-500 hover:bg-main-color-dark text-white font-semibold flex gap-1 items-center justify-center text-center">
                     Order within Nigeria
-                </div>
+                </div> */}
             </div>
         
         </div>
