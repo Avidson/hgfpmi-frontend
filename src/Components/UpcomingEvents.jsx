@@ -19,7 +19,7 @@ function UpcomingEvents() {
                 <img
                     src={image}
                     alt={ads_title}
-                    className="w-full h-85 object-cover object-top" /* added h-72 increased to h-85 */
+                    className="w-full h-78 object-cover object-top" /* added h-72 increased to h-85 */
                 />
     
                 <motion.div
@@ -34,7 +34,7 @@ function UpcomingEvents() {
     
                     <motion.div
     
-                        className="mt-[8px] flex gap-[4px] flex-col"
+                        className="mt-[8px] flex gap-[9px] flex-col"
                     >
                         <motion.a
                             href={ads_url}
