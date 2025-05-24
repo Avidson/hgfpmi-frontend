@@ -12,14 +12,14 @@ function UpcomingEvents() {
     const Event = ({ ads_title, image, organisation_name, ads_url, ads_starts, ads_end }) => {
         return (
             <motion.div
-                className="relative overflow-hidden rounded-lg shadow-lg w-[450px] h-auto small-phone:w-[98%]" /* added phone w from 95% to 98% */
+                className="relative overflow-hidden rounded-lg shadow-lg w-[450px] h-auto small-phone:w-[95%]" /* added phone w from 95% to 98% */
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
             >
                 <img
                     src={image}
                     alt={ads_title}
-                    className="w-full h-78 object-cover object-top" /* added h-72 increased to h-85 */
+                    className="w-full h-72 object-cover object-top" /* added h-72 increased to h-85 */
                 />
     
                 <motion.div
@@ -34,7 +34,7 @@ function UpcomingEvents() {
     
                     <motion.div
     
-                        className="mt-[8px] flex gap-[9px] flex-col"
+                        className="mt-[8px] flex gap-[4px] flex-col"
                     >
                         <motion.a
                             href={ads_url}
@@ -92,7 +92,7 @@ function UpcomingEvents() {
           <h2 className="text-2xl mb-12 text-center uppercase md:text-5xl font-semibold text-color-1 ">
             Upcoming Event
           </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-15">{/* added gap from 8 to 15 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{/* added gap from 8 to 15 */}
 
             {
                 isFetching ? (
