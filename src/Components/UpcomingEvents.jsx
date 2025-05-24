@@ -12,7 +12,7 @@ function UpcomingEvents() {
     const Event = ({ ads_title, image, organisation_name, ads_url, ads_starts, ads_end }) => {
         return (
             <motion.div
-                className="relative overflow-hidden rounded-lg shadow-lg w-[350px] h-auto small-phone:w-[95%]" /* added phone w from 95% to 98% */
+                className="relative overflow-hidden rounded-lg shadow-lg w-[380px] h-auto small-phone:w-[95%]" /* added phone w from 95% to 98% */
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
             >
