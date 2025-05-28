@@ -89,8 +89,8 @@ function UpcomingEvents() {
 
   return (
       <section className="py-8 pad1 bg-gray-100">
-          <h2 className="text-2xl mb-12 text-center uppercase md:text-5xl font-semibold text-color-1 ">
-            Upcoming Event
+          <h2 className="text-2xl mb-12 text-center uppercase md:text-5xl font-semibold ">
+            Upcoming Event / New Updates
           </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
