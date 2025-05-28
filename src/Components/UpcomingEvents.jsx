@@ -12,14 +12,14 @@ function UpcomingEvents() {
     const Event = ({ ads_title, image, organisation_name, ads_url, ads_starts, ads_end }) => {
         return (
             <motion.div
-                className="relative overflow-hidden rounded-lg shadow-lg w-[380px] h-auto small-phone:w-[95%]" /* added phone w from 95% to 98% */
+                className="relative overflow-hidden rounded-lg shadow-lg w-[380px] h-auto small-phone:w-[95%]" 
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
             >
                 <img
                     src={image}
                     alt={ads_title}
-                    className="w-full h-72 object-cover object-top" /* added h-72 increased to h-85 */
+                    className="w-full h-72 object-cover object-top" 
                 />
     
                 <motion.div
@@ -43,9 +43,9 @@ function UpcomingEvents() {
                             className="text-white hover:text-green-400 cursor-pointer transition-colors flex items-center gap-[4px]"
                         >
                             <IoIosLink size={22} />
-                            Vist
+                            Register
                         </motion.a>
-                        <motion.a
+                        {/* <motion.a
                             whileHover={{ scale: 1.05, y: -2 }}
                             className="text-white hover:text-blue-400 cursor-pointer transition-colors flex items-center gap-[4px]"
                         >
@@ -62,8 +62,8 @@ function UpcomingEvents() {
                                     //timeZoneName: 'short'
                                 })
                             }
-                        </motion.a>
-                        <motion.a
+                        </motion.a> */}
+                        {/* <motion.a
                             whileHover={{ scale: 1.05, y: -2 }}
                             className="text-white hover:text-pink-400 cursor-pointer transition-colors flex items-center gap-[4px]"
                         >
@@ -80,7 +80,7 @@ function UpcomingEvents() {
                                     //timeZoneName: 'short'
                                 })
                             }
-                        </motion.a>
+                        </motion.a> */}
                     </motion.div>
                 </motion.div>
             </motion.div>
@@ -92,7 +92,7 @@ function UpcomingEvents() {
           <h2 className="text-2xl mb-12 text-center uppercase md:text-5xl font-semibold text-color-1 ">
             Upcoming Event
           </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">{/* added gap from 8 to 15 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
             {
                 isFetching ? (
