@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import Button from '../Helpers/Button'
 import { donationCourse } from '../../data/donationCourse'
+import PayPalButton from './PayPalButton'
 
 function Donations({setSelectedCard}) {
     const { currentUser } = useSelector(state => state.user)
@@ -87,7 +88,7 @@ function Donations({setSelectedCard}) {
     }
 
   return (
-    <div className=''>
+    <div className='max-h-[85vh] overflow-y-auto'>
         {
             state === 'getUser' && (
                 <div>
@@ -144,6 +145,7 @@ function Donations({setSelectedCard}) {
                 </div>
             )
         }
+      <PayPalButton/>
     </div>
   )
 }

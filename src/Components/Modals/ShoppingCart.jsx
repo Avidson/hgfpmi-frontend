@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { removeFromCart, updateQuantity } from "../../redux/cart/cartSlice";
 import { MdOutlineRemoveShoppingCart } from "react-icons/md";
 import { CgRemove, CgAdd } from "react-icons/cg";
+import PayPalButton from "./PayPalButton";
 
 function ShoppingCart() {
   const cart = useSelector((state) => state.cart);
@@ -122,6 +123,9 @@ function ShoppingCart() {
             Proceed to Checkout
           </div>
         )}
+      </div>
+      <div>
+        <PayPalButton/>
       </div>
     </div>
   );
