@@ -43,6 +43,8 @@ function Login({setSelectedCard}) {
                 localStorage.setItem('HGFPMIACCESS', res.data.access)
                 localStorage.setItem('HGFPMIREFRESH', res.data.refresh)
                 setSelectedCard(null)
+            }else {
+                toast.error(res?.detail || 'Unable to login user')
             }
         } catch (error) {
             toast.error('Unable to login user')

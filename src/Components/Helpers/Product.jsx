@@ -49,7 +49,7 @@ function Product({data}) {
     const handleAddToCart = () => {
         //send product id to backend as well as token or userID
         dispatch(
-            addProduct({ ...data, id: data?.id, price: data?.isDiscountAllowed ? data?.discountPrice : data?.price,  quantity: productquantity })
+            addProduct({ ...data, product_id: data?.id, price: data?.discount_available ? Number(data?.discount_price) : Number(data?.price), quantity: productquantity, img: data?.image })
         )
         toast.success('Item addded to cart')
     }

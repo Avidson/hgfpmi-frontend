@@ -9,7 +9,7 @@ const cartSlice = createSlice({
     },
     reducers: {
         addProduct: (state, action) => {
-            const existingProduct = state.products.find(item => item.id === action.payload.id);
+            const existingProduct = state.products.find(item => item.product_id === action.payload.id);
         
             if (existingProduct) {
                 // If the product already exists, increase its quantity
@@ -25,7 +25,7 @@ const cartSlice = createSlice({
         },
         updateQuantity: (state, action) => {
             const { productId, quantity } = action.payload;
-            const productIndex = state.products.findIndex((item) => item.id === productId);
+            const productIndex = state.products.findIndex((item) => item.product_id === productId);
       
             if (productIndex !== -1) {
               // Create a new object to avoid mutating the existing state

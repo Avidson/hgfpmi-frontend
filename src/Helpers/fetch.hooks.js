@@ -234,3 +234,65 @@ export function useFetchAds(query){
 
     return ads
 }
+
+export function useFetchOrders(query){
+    const [ orders, setOrders] = useState({ isFetching: true, data: null, status: null, serverError: null, })
+    useEffect(() => {
+        const fetchOrders = async () => {
+            try {
+                const { data, status} = !query ? await axios.get(`/store/your_order`,
+                    // Include the token in the headers if available
+                    {
+                        'Content-Type': 'application/json',
+                        Authorization: `Bearer ${token}`,
+                        'X-Refresh-Token': refreshToken
+                    },
+                ) 
+                    : 
+                    await axios.get(`/store/your_order/${query}`,
+                        // Include the token in the headers if available
+                        {
+                            'Content-Type': 'application/json',
+                            Authorization: `Bearer ${token}`,
+                            'X-Refresh-Token': refreshToken
+                        },
+                    )
+                //console.log('Data from Hooks>>>', data, 'STATUS', status)
+
+                if(status === 200){
+                    setOrders({ isFetching: false, data: data, status: status, serverError: null})
+                } else{
+                    setOrders({ isFetching: false, data: null, status: status, serverError: null})
+                }
+            } catch (error) {
+                setOrders({ isFetching: false, data: null, status: null, serverError: error})
+            }
+        }
+        fetchOrders()
+    }, [query])
+
+    return orders
+}
+
+export function useFetchMisnistryPolicy(query){
+    const [ policy, setPolicy] = useState({ isFetching: true, data: null, status: null, serverError: null, })
+    useEffect(() => {
+        const fetchPolicy = async () => {
+            try {
+                const { data, status} = !query ? await axios.get(`/notifications/ministry-policy`) : await axios.get(`/notifications/ministry-policy/${query}`)
+                //console.log('Data from Hooks>>>', data, 'STATUS', status)
+
+                if(status === 200){
+                    setPolicy({ isFetching: false, data: data, status: status, serverError: null})
+                } else{
+                    setPolicy({ isFetching: false, data: null, status: status, serverError: null})
+                }
+            } catch (error) {
+                setPolicy({ isFetching: false, data: null, status: null, serverError: error})
+            }
+        }
+        fetchPolicy()
+    }, [query])
+
+    return policy
+}

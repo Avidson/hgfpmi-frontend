@@ -72,3 +72,77 @@ export async function conventionRequest(formData) {
         return res?.data
     }
 }
+
+//MAKE DONATION
+
+export async function donation(formData) {
+
+    try {
+
+        const res = await axios.post('/donate/create-payment-intent', 
+
+            formData,
+
+            // Include the token in the headers if available
+
+            {
+
+                'Content-Type': 'application/json',
+
+                Authorization: `Bearer ${token}`,
+
+                'X-Refresh-Token': refreshToken
+
+            },
+
+        )
+
+        return res
+
+    } catch (error) {
+
+        console.log('DONATION ERROR', error)
+
+        const res = error.response || 'Unable to login user'
+
+        return res?.data
+
+    }
+
+}
+
+export async function checkout(formData) {
+
+
+    try {
+
+        const res = await axios.post('/store/checkout/', 
+
+            formData,
+
+            // Include the token in the headers if available
+
+            {
+
+                'Content-Type': 'application/json',
+
+                Authorization: `Bearer ${token}`,
+
+                'X-Refresh-Token': refreshToken
+
+            },
+
+        )
+
+        return res
+
+    } catch (error) {
+
+        console.log('CHECKOUT ERROR', error)
+
+        const res = error.response || 'Unable to process checkout'
+
+        return res?.data
+
+    }
+}

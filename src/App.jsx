@@ -43,6 +43,8 @@ import OnlineGiving from './Components/Modals/OnlineGiving';
 import HolyGhostPrayerMovement from './Pages/HolyGhostPrayerMovement';
 import HolyGhostPrayerMovementAppreciation from './Pages/HolyGhostPrayerMovementAppreciation';
 import AllProduct from './Pages/AllProduct';
+import Checkout from './Components/Modals/Checkout';
+import MinistryPolicy from './Pages/MinistryPolicy';
 
 
 
@@ -115,6 +117,12 @@ function App() {
             <NewTestimony setTestimonyId={setTestimonyId} testimonyId={testimonyId} />
           </div>
         )
+      case 'checkout':
+          return (
+            <div>
+              <Checkout setSelectedCard={setSelectedCard} />
+            </div>
+        )
     }
   }
 
@@ -144,7 +152,7 @@ function App() {
 
   return (
     <div className='app overflow-hidden'>
-      <Toaster position='top-center'></Toaster>
+      <Toaster position='top-right'></Toaster>
       {
         selectedCard && (
           <>
@@ -183,7 +191,7 @@ function App() {
           <Route path='/Holy-Ghost-prayer-movement-success' element={<HolyGhostPrayerMovementAppreciation setSelectedCard={setSelectedCard} />} />
           <Route path='/all-product' element={<AllProduct setSelectedCard={setSelectedCard} />} />
 
-
+          <Route path='/ministry-policy' element={<MinistryPolicy setSelectedCard={setSelectedCard} />} />
           <Route path='/faceBookLive' element={<FaceBookLive countDownTime={countDownTime} setSelectedCard={setSelectedCard} />} />
           <Route path='/tiktokLive' element={<TiktokLive countDownTime={countDownTime} setSelectedCard={setSelectedCard} />} />
 

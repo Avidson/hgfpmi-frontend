@@ -4,8 +4,10 @@ import Button from '../Helpers/Button'
 import { donationCourse } from '../../data/donationCourse'
 import { loadStripe } from "@stripe/stripe-js";
 import toast from 'react-hot-toast';
+import PayPalButton from './PayPalButton';
 
-const stripePromise = loadStripe(`pk_test_51MccUgHurLamFWf3FKDVsNtR9PSBU5TaoD1ADv63jS3U8JuD0imwCABxyOEyvDgtw6k00HZMTrICZx8KR3PVlGLL008m4Ju8s3`)
+
+const stripePromise = loadStripe(`pk_live_51P2cbNHw86RH5XOFq3nK5XceBIBgDBKh8nw1P1jg77ogQs17QjbTnMDUYXPZHOFGSzHtQ30VEjFLW7c8GwUEAz3J00f9FWYeMass`)
 
 function OnlineGiving({setSelectedCard}) {
     const { currentUser } = useSelector(state => state.user)
@@ -30,7 +32,7 @@ function OnlineGiving({setSelectedCard}) {
             const stripe = await stripePromise;
     
             // Send the amount to your backend to create a Checkout Session
-            const response = await fetch("https://your-backend.com/create-checkout-session", {
+            const response = await fetch("http://127.0.0.1:8000/donate/create-payment-intent/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ amount: formData.amount })
@@ -70,7 +72,15 @@ function OnlineGiving({setSelectedCard}) {
 
                     <Button disabled={loading} onClick={handleGivivng} text={ loading ? 'Please Wait...' : 'Proceed with Giving'} style={'p-1 mt-8'} />
                 </div>
+                <PayPalButton/>
+                <div className='inputGroup'>
+                <PayPalButton/>
+                <Button disabled={loading} onClick={handleGivivng} text={ loading ? 'Please Wait...' : 'Proceed with Giving'} style={'p-1 mt-8'} />
+                
+                </div>
     </div>
+  
+
   )
 }
 
