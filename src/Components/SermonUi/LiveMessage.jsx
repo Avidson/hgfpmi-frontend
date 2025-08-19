@@ -12,6 +12,41 @@ function LiveMessage({ countDownTime }) {
   const liveData = data|| []
   const liveObject = liveData[0]
   console.log('object', liveObject)
+  
+  const getEmbedUrl = (url) => {
+  if (!url) return "";
+
+  try {
+    const yt = new URL(url);
+
+    // 1. Handle direct video links: youtube.com/watch?v=VIDEO_ID
+    if (yt.searchParams.get("v")) {
+      return `https://www.youtube.com/embed/${yt.searchParams.get("v")}`;
+    }
+
+    // 2. Handle share links: youtu.be/VIDEO_ID
+    if (yt.hostname === "youtu.be") {
+      return `https://www.youtube.com/embed/${yt.pathname.slice(1)}`;
+    }
+
+    // 3. Handle permanent live links: youtube.com/.../live
+    if (yt.pathname.endsWith("/live")) {
+      // channel live embed format
+      return `https://www.youtube.com/embed/live_stream?channel=${yt.pathname.split("/")[2]}`;
+    }
+
+    // 4. Already an embed link
+    if (yt.pathname.startsWith("/embed")) {
+      return url;
+    }
+
+    // fallback
+    return url;
+  } catch {
+    return url;
+  }
+};
+
   return (
     <div className="pad1 mt-8 mb-16 flex flex-col items-center justify-center">
       
@@ -24,7 +59,7 @@ function LiveMessage({ countDownTime }) {
           <Spinner />
         ) : (
           <iframe 
-            src={liveObject?.url_for?.replace('live', 'embed/')}
+            src={getEmbedUrl(liveObject?.url_for)}
             className="w-[850px] small-pc:w-[95%] h-[500px] shadow-xl border-[2px] border-main-color rounded-[10px] flex items-center justify-center relative"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
