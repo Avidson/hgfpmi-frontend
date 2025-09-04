@@ -145,4 +145,25 @@ export async function checkout(formData) {
         return res?.data
 
     }
+
+}
+
+//HANDLE FEEDBACK API
+export async function feedback(formData) {
+    try {
+        const res = await axios.post('/feedback/', 
+            formData,
+            // Include the token in the headers if available
+            {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${token}`,
+                'X-Refresh-Token': refreshToken
+            },
+        )
+        return res
+    } catch (error) {
+        console.log('ERROR SUBMITTING FEED BACK', error)
+        const res = error.response || 'Unable to submit feedback'
+        return res?.data
+    }
 }

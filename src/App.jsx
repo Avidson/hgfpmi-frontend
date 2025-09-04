@@ -45,6 +45,7 @@ import HolyGhostPrayerMovementAppreciation from './Pages/HolyGhostPrayerMovement
 import AllProduct from './Pages/AllProduct';
 import Checkout from './Components/Modals/Checkout';
 import MinistryPolicy from './Pages/MinistryPolicy';
+import ContactUs from './Pages/ContactUs';
 
 
 
@@ -194,7 +195,7 @@ function App() {
           <Route path='/ministry-policy' element={<MinistryPolicy setSelectedCard={setSelectedCard} />} />
           <Route path='/faceBookLive' element={<FaceBookLive countDownTime={countDownTime} setSelectedCard={setSelectedCard} />} />
           <Route path='/tiktokLive' element={<TiktokLive countDownTime={countDownTime} setSelectedCard={setSelectedCard} />} />
-
+          <Route path='/feedback' element={<ContactUs setSelectedCard={setSelectedCard} />} />
 
           <Route path='/admin/dashboard' element={<Dashboard />} />
           <Route path='/admin/events' element={<Events setSelectedCard={setSelectedCard} setEditEventID={setEditEventID} />} />
