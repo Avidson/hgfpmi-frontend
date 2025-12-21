@@ -23,7 +23,7 @@ function QuickNav({setSelectedCard}) {
        */}
 
         {/**SEARCH BAR */}
-        {
+       {/** {
           showSearch && (
           <div className="ml-auto w-full flex items-center gap-2">
             <input type="text" className="w-[95%] rounded-[5px] outline-none border-none px-2 py-[2px]" />
@@ -55,7 +55,7 @@ function QuickNav({setSelectedCard}) {
             <Link onClick={() => setSelectedCard('authenticate')} className="text cursor-pointer  text-color-1 hover:text-white duration-200">
                 <IoPersonCircleOutline className="text-[28px] phone:text-[24px]" />
             </Link>
-        </div>
+        </div>*/}
     </div>
   )
 }
