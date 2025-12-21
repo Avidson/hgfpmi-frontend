@@ -91,7 +91,7 @@ const Footer = () => {
             Mailing Address: 3515 Atlantic Avenue 1210 <br />
             Long Beach, CA 90807 <br />
             Telephone: 726.229.0448 <br />
-            Email: <a href="mailto:info@hgfpmi.org" className="text-yellow-500 hover:text-yellow-400">info@hgfdove.org</a>
+            Email: <a href="mailto:info@hgfpmi.org" className="text-yellow-500 hover:text-yellow-400">info@hgfpmi.org</a>
           </p>
         </div>
       </div>
